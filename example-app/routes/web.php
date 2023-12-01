@@ -22,7 +22,8 @@ Route::get('/', function () {
 
 // Route::get('hello/{name?}', [HelloController::class, 'index']);
 
-Route::get('/messages/{id?}', [MessageController::class, 'index']);
+Route::get('/messages', [MessageController::class, 'index']);
+Route::get('/messages/{id?}', [MessageController::class, 'detail']);
 
 // NOTE to self: Don't forget to add namespace at top op routing config 
 Route::get('/courses', [CourseController::class, 'index']); 
