@@ -2,7 +2,9 @@
 
 @section('content')
 
-<h2>Hello {{ $name }}</h2>
+<h2>Hello </h2>
+
+{{messages}}
 
 
 @endsection

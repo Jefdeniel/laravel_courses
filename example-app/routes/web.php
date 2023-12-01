@@ -3,6 +3,7 @@
 use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +22,7 @@ Route::get('/', function () {
 
 // Route::get('hello/{name?}', [HelloController::class, 'index']);
 
-Route::get('/hello/{name}', function ($name) {
-    return view('hello', ['name' => $name]);
-});
+Route::get('/messages/{id?}', [MessageController::class, 'index']);
 
 // NOTE to self: Don't forget to add namespace at top op routing config 
 Route::get('/courses', [CourseController::class, 'index']); 

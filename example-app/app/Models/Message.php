@@ -2,13 +2,9 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Model;
 
-class Message   {
-    protected static $messages = ['Dieter' => 'Hallo', 'Peter' => 'Hi', 'Hans' => 'Servus'];
-
-    public static function getMessageByUser($user) {
-        return self::$messages[$user];
-      }
+class Message extends Model  {
 }
 
 ?>
